@@ -10,9 +10,6 @@ export default function Contactus() {
   let firstlogin=()=>{
     alert("Login First to send the message")
   }
-
-  // let username=user ? user.name :
-  // console.log(username)
   
   const [usermsg ,setUsermsg]=useState({
     username:"",email:"",phone:"",subject:"",message:""
