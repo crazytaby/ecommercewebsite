@@ -39,8 +39,16 @@ export default function Navbar() {
                                     <li className="list-items">
                                         <Link to="/">Home</Link>
                                     </li>
-                                    <li className="list-items">
+                                    <li className="hover1 list-items ">
                                         <Link to="/products/electronics">Electronics</Link>
+                                        <ul className="inner-nav-list">
+                                            <li className="list-items">
+                                            <Link to="/products/electronics/mobiles">Mobiles</Link>
+                                            </li>
+                                            <li className="list-items">
+                                            <Link to="/products/electronics/laptops">Laptops</Link>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li className="list-items">
                                         <Link to="/about-us">About us</Link>
@@ -48,8 +56,19 @@ export default function Navbar() {
                                     <li className="list-items">
                                         <Link to="/contact-us">Contact us</Link>
                                     </li>
-                                    <li className="list-items">
-                                        <Link to="/">Clothing</Link>
+                                    <li className="hover2 list-items">
+                                        <Link to="/clothings">Clothing</Link>
+                                        <ul className="inner-nav-list2">
+                                            <li className="list-items">
+                                            <Link to="/products/clothings/men">Mens</Link>
+                                            </li>
+                                            <li className="list-items">
+                                            <Link to="/products/clothings/women">Womens</Link>
+                                            </li>
+                                            <li className="list-items">
+                                            <Link to="/products/clothings/kids">Kids</Link>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </nav>
@@ -121,7 +140,7 @@ export default function Navbar() {
                             <Link to="/">Home</Link>
                         </li>
                         <li className="side-menu-list-item">
-                            <Link to="/products">Products</Link>
+                            <Link to="/products/electronics">Electronics</Link>
                         </li>
                         <li className="side-menu-list-item">
                             <Link to="/about-us">About us</Link>

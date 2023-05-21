@@ -54,7 +54,45 @@ header .menu-section {
     padding: 10px 20px;
     font-size: 15px;
     font-weight: 200px;
+    position: relative;
   }
+  header nav .nav-list .list-items .inner-nav-list{
+    position: absolute;
+    top: 40px;
+    z-index: 0;
+    box-shadow: 0 0 10px;
+    left: 13px;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    background-color: #fff;
+    display: none;
+  }
+
+  header nav .nav-list .hover1:hover .inner-nav-list{
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+  header nav .nav-list .list-items .inner-nav-list2{
+    position: absolute;
+    top: 40px;
+    z-index: 0;
+    box-shadow: 0 0 10px;
+    left: 13px;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    background-color: #fff;
+    display: none;
+  }
+
+  header nav .nav-list .hover2:hover .inner-nav-list2{
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+
   header nav .nav-list .list-items a {
     color: rgba(0, 0, 0, 0.616);
     text-decoration: none;

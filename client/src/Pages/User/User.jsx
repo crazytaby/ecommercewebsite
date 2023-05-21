@@ -6,12 +6,14 @@ const User = () => {
 
   const { user} = useAuth0();
 
+  const userimage=user.picture
+
   return (
     <>
     
     <div class="maincontainer">
         <div class="box">
-            <img src={user.picture} alt=""/>
+            <img src={userimage} alt=""/>
             <ul>
                 <li>{user.name}</li>
                 <li>{user.birthdate}</li>
@@ -22,29 +24,9 @@ const User = () => {
             <ul>
                 <h1>about</h1>
             </ul>
-            {/* <ul>
-                <h3>Work</h3>
-                <li>Actor</li>
-            </ul> */}
             <ul>
-                <h3>Gender</h3>
-                <li>{user.gender}</li>
-            </ul>
-            <ul>
-                <h3>Country</h3>
-                <li>{user.locale}</li>
-            </ul>
-            <ul>
-                <h3>Address</h3>
-                <p>{user.address}</p>
-            </ul>
-            <ul>
-                <h3>Contact</h3>
-                <li>{user.phone_number} </li>
-            </ul>
-            <ul>
-                <h3>Contact</h3>
-                <li>{user.phone_number_verified} </li>
+                <h3>Name</h3>
+                <li>{user.name} </li>
             </ul>
             <ul>
                 <h3>Mail</h3>

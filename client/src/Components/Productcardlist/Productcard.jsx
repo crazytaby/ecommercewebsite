@@ -25,10 +25,10 @@ const Productcard = (props) => {
                 <div className="quantity-sect">
                     <div className="product-quantity">
                         <Link to={"/products/electronics/"+category+"/"+id} >
-                        <button className="add-to-cart-btn" >viewproduct</button>
+                        <button className="productcard-add-to-cart-btn" >viewproduct</button>
                         </Link>
                     </div>
-                    <button className="add-to-cart-btn">Add to cart</button>
+                    <button className="productcard-add-to-cart-btn">Add to cart</button>
                 </div>
             </div>
             </div>
