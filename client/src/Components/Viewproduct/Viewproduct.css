@@ -1,0 +1,150 @@
+.main{
+    width: 100%;
+}
+
+.elements{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.text{
+    flex-basis: 45%;
+}
+
+.main-img{
+    height: 80vh;
+    display: flex ;
+}
+
+.small-img{
+    display: flex;
+    flex-direction:column ;
+}
+.small-img img{
+    height: 19vh;
+    margin-bottom: 9px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.small-img img:hover{
+    opacity: 1;
+}
+
+.main-img img{
+    height: 100%;
+
+}
+
+p{
+    margin-bottom: 20px;
+}
+.brand{
+ background-color:#008000;
+ width: fit-content;
+ font-size: 12px;
+ color: #fff;
+ padding: 2px 5px;
+
+}
+h2{
+    font-size: 35px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.review{
+    background-color: #008000;
+    display: inline-block;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.review .fa{
+    counter-reset: #fff;
+}
+.price{
+    color: rgb(29,28,28);
+    font-size: 26px;
+    font-weight: bold;
+    padding-right: 10px ;
+}
+.price-box{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 30px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    width: 140px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fe980f;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+button .fa{
+    margin-right: 10px;
+}
+.buy{
+    background-color: rgb(201,97,57);
+}
+.ele1{
+    display: flex;
+}
+
+.small-img{
+    margin-right: 2.5rem;
+}
+
+.small-img img{
+    width:5rem;
+}
+
+@media only screen and(max-width:1200px) {
+    .elements{
+        flex-direction: column;
+        height: auto;
+        padding: 5% 0;
+    }
+    .text{
+        padding-top: 50px;
+    }
+    
+}
+@media only screen and(max-width:600px){
+    .all.img{
+        flex-direction: column;
+        justify-content: space-evenly;
+        order: 1;
+    }
+
+    .product-box{
+        width: 100%;
+    }
+    .main-img img{
+        width: 100%;
+    }
+    .small-img img{
+        width: 25%;
+    }
+    h2{
+        font-size: 25px;
+    }
+}
+
+

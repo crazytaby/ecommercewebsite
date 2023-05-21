@@ -2,27 +2,14 @@ import React from 'react'
 import './Slider.css'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import Sliderimg from '../Slider/sliderimg.jpg' 
+import Sliderimg1 from '../Slider/im1.jpg'
+import Sliderimg2 from '../Slider/im2.jpg'
+import Sliderimg3 from '../Slider/im3.jpg'
 
 
 const Slider = () => {
-
-
-
     return (
 
-        // <section className="banner p-0">
-        //     <div className="splide" role="group" aria-label="Splide Basic HTML Example">
-        //         <div className="splide__track">
-        //             <ul className="splide__list">
-        //                 <li className="splide__slide"><img src={Sliderimg} alt=""/></li>
-        //                 <li className="splide__slide"><img src={Sliderimg} alt=""/></li>
-        //                 <li className="splide__slide"><img src={Sliderimg} alt=""/></li>
-        //             </ul>
-        //         </div>
-        //     </div>
-        // </section>
-        
         <Splide hasTrack={ true }  aria-label="My Favorite Images" options={ {
             type   : 'loop',
             autoplay:false,
@@ -33,36 +20,38 @@ const Slider = () => {
             breakpoints: {
                 1400:{
                     padding:"10rem",
-                    
+
                 },
                 1200:{
                     padding:"0rem",
-                    
+
                 },
                 992:{
                 height:300,
-             
+
             },
                 425:{
                 height:300,
-             
+
             },
             },
           }}>
             <SplideSlide >
                 <div className="img-div">
-                <img className='slider-img' src={Sliderimg} alt="Img-1" />
+                <img className='slider-img' src={Sliderimg1} alt="Img-1" />
                 </div>
             </SplideSlide>
             <SplideSlide>
                 <div className="img-div">
-                <img className='slider-img' src={Sliderimg} alt="Img-2" />
+                <img className='slider-img' src={Sliderimg2} alt="Img-2" />
+                </div>
+            </SplideSlide>
+            <SplideSlide>
+                <div className="img-div">
+                <img className='slider-img' src={Sliderimg3} alt="Img-2" />
                 </div>
             </SplideSlide>
         </Splide>
-
-        
-
     )
 }
 

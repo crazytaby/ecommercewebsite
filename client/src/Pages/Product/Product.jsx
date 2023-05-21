@@ -1,12 +1,12 @@
 import React from 'react'
-
-import Slider from '../../Components/Slider/Slider';
+import Productcardlist from '../../Components/Productcardlist/Productcardlist'
+import Laptopcardlist from '../../Components/Productcardlist/Laptopcardlist'
 
 const Product = () => {
   return (
     <>
-    <Slider/>
-    <div>Product</div>
+      <Productcardlist/>
+      <Laptopcardlist/>
     </>
   )
 }

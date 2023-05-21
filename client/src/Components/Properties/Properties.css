@@ -44,3 +44,21 @@ section.properties {
     text-align: center;
     display: block;
   }
+
+  figure{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  figure i{
+    /* width: 100%; */
+    font-size: 200px;
+    color: #49B2FE;
+  }
+
+  @media (min-width: 767px) {
+    figure i{
+      font-size: 100px;
+    }
+  }

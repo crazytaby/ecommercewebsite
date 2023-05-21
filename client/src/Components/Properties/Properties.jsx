@@ -1,5 +1,5 @@
 import React from 'react'
-import properties1 from '../../Assets/Properties/freship.png'
+// import properties1 from '../../Assets/Properties/freship.png'
 // import properties2 from '../../Assets/Properties/support.jpg'
 // import properties3 from '../../Assets/Properties/support.jpg'
 // import properties4 from '../../Assets/Properties/support.jpg'
@@ -23,7 +23,7 @@ const Properties = () => {
                         <div className="col-lg-3 col-md-6 col-12 pt-lg-0 pt-md-5 p-3">
                             <div className="d-flex-column">
                                 <figure>
-                                    <img src={properties1} alt=""/>
+                                <i class='bx bxs-ship' ></i>
                                 </figure>
                                 <span>Free Shiping</span>
                             </div>
@@ -31,25 +31,25 @@ const Properties = () => {
                         <div className="col-lg-3 col-md-6 col-12 pt-lg-0 pt-md-5 p-3">
                             <div className="d-flex-column">
                                 <figure>
-                                    <img src={properties1} alt=""/>
+                                    <i class='bx bx-support' ></i>
                                 </figure>
-                                <span>Free Shiping</span>
+                                <span>24X7 customer support</span>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-12 pt-lg-0 pt-md-5 p-3">
                             <div className="d-flex-column">
                                 <figure>
-                                    <img src={properties1} alt=""/>
+                                <i class='bx bxs-credit-card-alt' ></i>
                                 </figure>
-                                <span>Free Shiping</span>
+                                <span>Secure Payment</span>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-12 pt-lg-0 pt-md-5 p-3">
                             <div className="d-flex-column">
                                 <figure>
-                                    <img src={properties1} alt=""/>
+                                <i class='bx bxs-package' ></i>
                                 </figure>
-                                <span>Free Shiping</span>
+                                <span>Easy Return</span>
                             </div>
                         </div>
                     </div>

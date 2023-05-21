@@ -7,8 +7,13 @@ import Cart from '../Pages/Cart/Cart'
 import Wishlist from '../Pages/Wishlist/Wishlist'
 import User from '../Pages/User/User'
 import Product from '../Pages/Product/Product'
+import Seller from '../Pages/seller/Seller'
+import Viewproduct from '../Components/Viewproduct/Viewproduct'
+import Mobile from '../Pages/Mobiles/Mobile'
+import Laptop from '../Pages/Laptops/Laptop'
 
 export default function AllRoutes() {
+
   return (
         <Routes>
             <Route path='/' element={<Home/>}/>
@@ -17,7 +22,13 @@ export default function AllRoutes() {
             <Route path='/wishlist' element={<Wishlist/>}/>
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/user' element={<User/>}/>
-            <Route path='/products' element={<Product/>}/>
+            <Route path='/products/electronics' element={<Product/>}/>
+            <Route path='/seller' element={<Seller/>}/>
+            <Route path='/products/electronics/:category/:id' element={<Viewproduct/>}/>
+            <Route path='/products/electronics/mobiles' element={<Mobile/>}/>
+            <Route path='/products/electronics/laptops' element={<Laptop/>}/>
+            
+            
         </Routes>
   )
 }

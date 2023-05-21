@@ -1,30 +1,36 @@
 import React from 'react'
+import './Productcard.css'
+import {Link} from 'react-router-dom'
 
-const Productcard = () => {
+const Productcard = (props) => {
+    const category=props.category.toLowerCase()+"s";
+    const id = props.id;
     return (
-        <>
-            <div class="product-div">
-                <div class="product-img">
+        <> 
+            <div className="col-lg-3 col-md-6 pb-lg-4 pb-2 d-flex justify-content-center">
+            <div className="product-div">
+                <div className="product-img">
                     <figure>
-                        <img src="assets/images/custom_img/trending products/image1.jpg" alt="" />
+                        <img src={props.img} alt="" />
                     </figure>
                 </div>
-                <div class="product-info">
-                    <h5 class="product-info-h5">OnePlus Nord CE 2 Lite 5G</h5>
-                    <div class="price">
-                        <h6 class="product-price">₹18,990</h6>
-                        <span class="product-red-price">₹19,990.00</span>
+                <div className="product-info">
+                    <h5 className="product-info-h5">{props.productname}</h5>
+                    <div className="price">
+                        <h6 className="product-price">{props.price}</h6>
+                        <span className="product-red-price">{props.increasedprice}</span>
                     </div>
                 </div>
 
-                <div class="quantity-sect">
-                    <div class="product-quantity">
-                        <button class="quantity-btn" type="button">-</button>
-                        <input class="quantity-input" type="text" value="1" />
-                        <button class="quantity-btn" type="button">+</button>
+                <div className="quantity-sect">
+                    <div className="product-quantity">
+                        <Link to={"/products/electronics/"+category+"/"+id} >
+                        <button className="add-to-cart-btn" >viewproduct</button>
+                        </Link>
                     </div>
-                    <button class="add-to-cart-btn">Add to cart</button>
+                    <button className="add-to-cart-btn">Add to cart</button>
                 </div>
+            </div>
             </div>
         </>
     )

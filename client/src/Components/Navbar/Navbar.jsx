@@ -9,7 +9,6 @@ export default function Navbar() {
 
 
     let open_menu = () => {
-        //    let menu_btn=document.querySelector("#menu-btn")
 
         let menu = document.getElementById("sidem");
         console.log(menu)
@@ -19,8 +18,6 @@ export default function Navbar() {
     const { loginWithRedirect, isAuthenticated, logout } = useAuth0();
 
 
-    //   document.querySelector('#close-btn').addEventListener('click',()=>{
-    //   })
     let close_menu = () => {
 
         document.getElementById("sidem").classList.remove('side-menu-open')
@@ -43,7 +40,7 @@ export default function Navbar() {
                                         <Link to="/">Home</Link>
                                     </li>
                                     <li className="list-items">
-                                        <Link to="/products">Products</Link>
+                                        <Link to="/products/electronics">Electronics</Link>
                                     </li>
                                     <li className="list-items">
                                         <Link to="/about-us">About us</Link>

@@ -40,8 +40,8 @@ export default function Contactus() {
   
     try{
       
-      let msg =await axios.post("http://localhost:8000/contact-us",usermsg)
-      alert(msg)
+      await axios.post("http://localhost:8000/contact-us",usermsg)
+      alert("msg sent")
     }
     catch(e){
       console.log(e)

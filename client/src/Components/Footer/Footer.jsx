@@ -73,8 +73,8 @@ const Footer = () => {
                         <div className="col-lg-2">
                             <h6 className="list-heading">Useful Links</h6>
                             <ul className="footer-list">
-                                <li className="footer-list-items"> 
-                                <Link className="footer-list-link" to="/"> Why OyeFish
+                                <li className="footer-list-items">
+                                    <Link className="footer-list-link" to="/"> Why OyeFish
                                     </Link>
                                 </li>
                                 <li className="footer-list-items"> <Link className="footer-list-link" to="/"> FAQs
@@ -142,7 +142,7 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-3">
                             <figure className="footer-logo">
-                                <img src={Logo} alt=""/>
+                                <img src={Logo} alt="" />
                             </figure>
                             <span className="footer-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
                                 nihil rem ipsum deleniti minima provident ut doloremque adipisci quae perferendis?</span>
