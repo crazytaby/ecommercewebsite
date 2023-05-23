@@ -4,7 +4,7 @@ import './Productcardlist.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const Laptopcardlist = () => {
+const Laptopcardlist = (props) => {
 
     const [productlist,setproductlist]=useState([])
     useEffect(
@@ -29,7 +29,7 @@ const Laptopcardlist = () => {
                                 For You
                             </div>
                             <div className="categories-text m-0 pb-2 pt-0">
-                                Laptop
+                                {props.heading}
                             </div>
                         </div>
                         <div className="section-head-btn">
@@ -43,7 +43,7 @@ const Laptopcardlist = () => {
                                 if(index<=3)
                                 {
                                     return(
-                                    <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname}  price={product.price} increasedprice={product.increasedprice} rating={product.rating} />
+                                    <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname}  price={product.price} increasedprice={product.increasedprice} rating={product.rating} brand={product.brand} />
                                     )
                                 }
                                 else{

@@ -1,10 +1,28 @@
 import React from 'react'
 import './Productcard.css'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 const Productcard = (props) => {
     const category=props.category.toLowerCase()+"s";
     const id = props.id;
+
+    function gotoCart(e) {
+        e.preventDefault();
+    
+        try {
+          axios.post("http://localhost:8000/takeCartData", {
+            "imgurl":props.img,
+            "productname":props.productname,
+            "price":props.price,
+            "increasedprice":props.price,
+            "brand":props.brand
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      } 
+
     return (
         <> 
             <div className="col-lg-3 col-md-6 pb-lg-4 pb-2 d-flex justify-content-center">
@@ -28,7 +46,7 @@ const Productcard = (props) => {
                         <button className="productcard-add-to-cart-btn" >viewproduct</button>
                         </Link>
                     </div>
-                    <button className="productcard-add-to-cart-btn">Add to cart</button>
+                    <button className="productcard-add-to-cart-btn" onClick={gotoCart}>Add to cart</button>
                 </div>
             </div>
             </div>

@@ -5,8 +5,8 @@ import Laptopcardlist from '../../Components/Productcardlist/Laptopcardlist'
 const Product = () => {
   return (
     <>
-      <Productcardlist/>
-      <Laptopcardlist/>
+      <Productcardlist heading="Best Mobiles"/>
+      <Laptopcardlist heading="Best Laptops"/>
     </>
   )
 }

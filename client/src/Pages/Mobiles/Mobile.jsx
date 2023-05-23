@@ -8,7 +8,7 @@ const Mobile = () => {
     useEffect(
         () => {
             getProducts()
-        }, []
+        },[]
     )
     let getProducts = () => {
         axios.get("http://localhost:8000/products/electronics/mobiles")
@@ -24,7 +24,7 @@ const Mobile = () => {
                     {
                         productlist.map((product) => {
                             return (
-                                <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname} price={product.price} increasedprice={product.increasedprice} />
+                                <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname} price={product.price} increasedprice={product.increasedprice} brand={product.brand} />
                             )
                         })
                     }

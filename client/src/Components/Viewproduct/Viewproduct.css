@@ -16,6 +16,11 @@
     align-items: center;
     justify-content: center;
 }
+.col-lg-6:first-child{
+    
+    position: sticky;
+    top: 100px;
+}
 
 .text{
     display: flex;

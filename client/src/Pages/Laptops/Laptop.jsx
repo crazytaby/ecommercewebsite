@@ -24,7 +24,7 @@ const Laptop = () => {
                     {
                         productlist.map((product, index) => {
                             return (
-                                <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname} price={product.price} increasedprice={product.increasedprice} />
+                                <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname} price={product.price} increasedprice={product.increasedprice} brand={product.brand}/>
                             )
                         })
                     }

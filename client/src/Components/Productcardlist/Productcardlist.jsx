@@ -4,7 +4,7 @@ import './Productcardlist.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const Productcardlist = () => {
+const Productcardlist = (props) => {
 
     
 
@@ -31,7 +31,7 @@ const Productcardlist = () => {
                                 For You
                             </div>
                             <div className="categories-text m-0 pb-2 pt-0">
-                                Mobile
+                                {props.heading}
                             </div>
                         </div>
                         <div className="section-head-btn">
@@ -45,7 +45,7 @@ const Productcardlist = () => {
                                 if(index<=3)
                                 {
                                     return(
-                                    <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname}  price={product.price} increasedprice={product.increasedprice} />
+                                    <Productcard id={product._id} category={product.category} img={product.imgurl} productname={product.productname}  price={product.price} increasedprice={product.increasedprice} brand={product.brand}/>
                                     )
                                 }
                                 else{

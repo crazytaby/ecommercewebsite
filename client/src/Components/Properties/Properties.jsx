@@ -56,7 +56,6 @@ const Properties = () => {
                 </div>
             </div>
         </section>
-    <div>Properties</div>
     </>
   )
 }

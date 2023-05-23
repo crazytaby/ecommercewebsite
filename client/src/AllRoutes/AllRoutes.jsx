@@ -11,6 +11,8 @@ import Seller from '../Pages/seller/Seller'
 import Viewproduct from '../Components/Viewproduct/Viewproduct'
 import Mobile from '../Pages/Mobiles/Mobile'
 import Laptop from '../Pages/Laptops/Laptop'
+import Buy from '../Pages/Buy/Buy'
+import Payment from '../Pages/Buy/Payment'
 
 export default function AllRoutes() {
 
@@ -27,8 +29,8 @@ export default function AllRoutes() {
             <Route path='/products/electronics/:category/:id' element={<Viewproduct/>}/>
             <Route path='/products/electronics/mobiles' element={<Mobile/>}/>
             <Route path='/products/electronics/laptops' element={<Laptop/>}/>
-            
-            
+            <Route path='/buy' element={<Buy/>}/>
+            <Route path='/payment' element={<Payment/>}/>
         </Routes>
   )
 }

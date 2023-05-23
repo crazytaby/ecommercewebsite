@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors");
 const port = 8000;
 const product=require("./product")
-const objectid=require('./objid')
+const cartproduct=require("./cartproduct.js")
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -35,10 +35,6 @@ app.post("/contact-us", async (req, res) => {
   }
 });
 
-//api  to get data from database
-// app.get("/products/electronics",  async(req, res) => {
-//    res.send(await product.find())
-// });
 
 app.get("/products/electronics/mobiles",  async(req, res) => {
    res.send(await product.find({category:"Mobile"}))
@@ -61,15 +57,30 @@ app.get("/products/electronics/:category/:id",  async(req, res) => {
 
 });
 
-
-app.post("/takedata",cors(),async(req,res)=>{
-  const productDetails = await req.body;
-  const {imgurl,productname,ratings,price,increasedprice,category,desc,quantity,brand,ram,storage,frontcamera,backcamera,battery,processor,display} = productDetails;
-  let data = {imgurl,productname,ratings,price,increasedprice,category,desc,quantity,brand,ram,storage,frontcamera,backcamera,battery,processor,display};
-  // console.log(data)
-  await product.insertMany([data]);
+app.get('/getCartData',async(req,res)=>{
+    res.send(await cartproduct.find());
 })
 
+
+app.post('/takeCartData',async(req,res)=>{ 
+  const cartData = await req.body;
+  const {imgurl,productname,price,increasedprice,brand} = cartData;
+  let data = {imgurl,productname,price,increasedprice,brand};
+  console.log(data)
+  await cartproduct.insertMany([data]);
+})
+
+app.post('/deleteCartData',async (req,res)=>{
+  const CartData = await req.body;
+  const {id,name} = CartData;
+  try {
+      cartproduct.deleteOne({"_id":id}).then((res)=>{
+          console.log(res);
+      });
+  } catch (error) {
+      console.log(error);
+  }
+})
 
 
 
