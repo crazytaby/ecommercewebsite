@@ -12,7 +12,7 @@ const Slider = () => {
 
         <Splide hasTrack={ true }  aria-label="My Favorite Images" options={ {
             type   : 'loop',
-            autoplay:true,
+            autoplay:false,
             // padding: '20rem',
             // gap:"1rem",
             arrows:true,

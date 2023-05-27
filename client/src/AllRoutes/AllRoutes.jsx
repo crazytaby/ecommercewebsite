@@ -13,6 +13,7 @@ import Mobile from '../Pages/Mobiles/Mobile'
 import Laptop from '../Pages/Laptops/Laptop'
 import Buy from '../Pages/Buy/Buy'
 import Payment from '../Pages/Buy/Payment'
+import Clothings from '../Pages/Clothings/Clothings'
 
 export default function AllRoutes() {
 
@@ -25,6 +26,7 @@ export default function AllRoutes() {
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/user' element={<User/>}/>
             <Route path='/products/electronics' element={<Product/>}/>
+            <Route path='/products/clothings' element={<Clothings/>}/>
             <Route path='/seller' element={<Seller/>}/>
             <Route path='/products/electronics/:category/:id' element={<Viewproduct/>}/>
             <Route path='/products/electronics/mobiles' element={<Mobile/>}/>

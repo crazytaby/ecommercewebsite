@@ -4,14 +4,13 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './Viewproduct.css'
-// import './Productdetails.css'
 // import image1 from './ip1.png'
 import image2 from './ip2.png'
 import image3 from './ip3.png'
 import image4 from './ip5.png'
 import Productdetails from './Productdetails';
 
-const Viewproduct = () => { 
+const Viewcloths = () => {
     const { category, id } = useParams();
     const [product, setProduct] = useState([])
     useEffect(
@@ -21,13 +20,13 @@ const Viewproduct = () => {
         }, {}
     )
     let getProduct = () => {
-        axios.get("http://localhost:8000/products/electronics/" + category + "/" + id)
+        axios.get("http://localhost:8000/products/clothings/"+ category + "/" + id)
             .then(async (res) => {
                 await setProduct(res.data);
             })
     }
 
-    const [conditon,setconditon]=useState(true);
+    // const [conditon,setconditon]=useState(true);
 
     
 //     let getconditon = () => {
@@ -61,43 +60,41 @@ function gotoCart(e) {
 
     return (
         <>
-            <div className="main">
-                <div className="elements">
+            <div class="main">
+                <div class="elements">
                     <div className="row">
                         <div className="px-lg-3 px-0 col-lg-6 col-12 pb-lg-0 pb-5">
 
-                            <div className="ele1">
-                                <div className="small-img" >
+                            <div class="ele1">
+                                <div class="small-img" >
                                     <img src={product.imgurl} alt='sideimage' />
                                     <img src={image2} alt='sideimage' />
                                     <img src={image3} alt='sideimage' />
                                     <img src={image4} alt='sideimage' />
                                 </div>
-                                <div className="main-img">
+                                <div class="main-img">
                                     <img src={product.imgurl} id="imgbox" alt='mainimage' />
                                 </div>
                             </div>
                         </div>
                         <div className="px-lg-3 px-0 col-lg-6 col-12 d-flex align-items-center justify-content-center">
-                            <div className="text">
-                                <div className="content">
-                                    <p className="review">Brand : {product.brand}</p>
+                            <div class="text">
+                                <div class="content">
+                                    <p class="review">Brand : {product.brand}</p>
                                     <h2>{product.productname}</h2>
-                                    <div className="review">
+                                    <div class="review">
                                         <i class='bx bxs-star'></i>
                                         <span> Ratings {product.ratings}</span>
                                     </div>
-                                    <div className="price-box">
-                                        <p className="price">{product.price}</p>
-                                        <strike className="decreaseprice">{product.increasedprice} </strike>
+                                    <div class="price-box">
+                                        <p class="price">{product.price}</p>
+                                        <strike class="decreaseprice">{product.increasedprice} </strike>
                                     </div>
-                                    <div className="quantity-sect">
-                                        <button className='add-to-cart-btn' >
+                                    <div class="quantity-sect">
                                         <Link to='/buy'>
-                                            Buy Now
+                                        <button class="add-to-cart-btn">Buy Now</button>
                                         </Link>
-                                            </button>
-                                        <button className="add-to-cart-btn" onClick={gotoCart}>Add to cart</button>
+                                        <button class="add-to-cart-btn" onClick={gotoCart}>Add to cart</button>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +103,7 @@ function gotoCart(e) {
                         </div>
                         <div className="px-lg-3 px-0 col-lg-6 col-12 d-flex align-items-center justify-content-center">
 
-                                    <Productdetails ram={product.ram} storage={product.storage} frontcamera={product.frontcamera} backcamera={product.backcamera} battery={product.battery} processor={product.processor} display={product.display} />
+                                    <Productdetails color={product.color} occasion={product.occasion} salespackage={product.salespackage} pattern={product.pattern} fabric={product.fabric} fabriccare={product.fabriccare} />
 
                         </div>
                     </div>
@@ -117,4 +114,4 @@ function gotoCart(e) {
     )
 }
 
-export default Viewproduct
+export default Viewcloths

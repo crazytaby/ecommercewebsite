@@ -23,9 +23,10 @@
 }
 
 .text{
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    width: 100%;
 }
 
 .main-img{
@@ -64,7 +65,7 @@ h2{
     padding: 5px 15px;
     border-radius: 30px;
     font-size: 15px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .review .bxs-star{
@@ -94,7 +95,7 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
 }
 
 @media screen and (max-width:1200px) {
@@ -116,7 +117,16 @@ h2{
     z-index: 50;
     overflow: hidden;
     padding: 0px 20px;
+    width: 40%;
+    text-decoration: none;
 }
+
+.add-to-cart-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
 
 .add-to-cart-btn::before {
     z-index: -10;

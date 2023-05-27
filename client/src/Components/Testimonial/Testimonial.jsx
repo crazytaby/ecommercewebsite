@@ -19,30 +19,12 @@ const Testimonial = () => {
         <Splide hasTrack={ true }  aria-label="My Favorite Images" options={ {
             type   : 'loop',
             autoplay:true,
-            // padding: '20rem',
-            // gap:"1rem",
+            // padding: '5rem',
+            gap:"1rem",
             arrows:true,
             height:500,
             perPage:3,
             perMove:3,
-            // breakpoints: {
-            //     1400:{
-            //         padding:"10rem",
-
-            //     },
-            //     1200:{
-            //         padding:"0rem",
-
-            //     },
-            //     992:{
-            //     height:300,
-
-            // },
-            //     425:{
-            //     height:300,
-
-            // },
-            // },
           }}>
             <SplideSlide >
                 
